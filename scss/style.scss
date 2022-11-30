@@ -80,8 +80,9 @@ body {
     justify-content:flex-end;
 }
 
-.titulo-nav {
+.titulo-nav, .nav-item {
     text-align: center;
+    @include sombra-boton;
 }
 
 .navbar-nav {
@@ -105,8 +106,7 @@ body {
 }
 
 .contendedor-index {
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     padding: 1rem;
     align-items: center;
 }
@@ -130,8 +130,7 @@ body {
 .horarios {
     text-align: center;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     justify-content: center;
 }
 
@@ -194,8 +193,7 @@ body {
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<TRABAJOS PARA CELUS<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 .tipo-cortes {
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     text-align: center;
     gap: 1rem;
 }
@@ -278,8 +276,7 @@ body {
 }
 
 .donde-estamos-total {
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     align-items: center;
 }
 
@@ -429,8 +426,7 @@ fieldset {
     
     .titulo-nav,
     .nav-item {
-        text-shadow: 1px 1px 1px rgb(179, 179, 237);
-        
+        @include sombra-boton;
     }
 
     .nav-item {
@@ -510,8 +506,7 @@ fieldset {
     padding-top: 1rem;
 }
 .horarios {
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     justify-content: space-between;
 }
 
@@ -542,8 +537,7 @@ fieldset {
 
 .presentation {
     grid-area: presentation;
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     justify-content: start;
 }
 
@@ -644,8 +638,7 @@ fieldset {
 }   
 
 .container-fluid {
-    display: flex;
-    flex-direction: column;
+    @include f-col;
 }
 
 .imagen-cortes {
@@ -727,8 +720,7 @@ div {
     display: none;
 }
 .mensaje-final {
-    display: flex;
-    flex-direction: column;
+    @include f-col;
     align-items: center;
 }
 
@@ -761,8 +753,7 @@ div {
 
 .contactoInicio {
     .donde-estamos-total {
-    display: flex;
-    flex-direction: column;
+        @include f-col;
     align-items: stretch;
     padding-left: .5rem;
     padding-right: .5rem;
@@ -848,8 +839,7 @@ div {
 
 .tituloForm,
     .camposForm {
-        display: flex;
-        flex-direction: column;
+        @include f-col;
         padding-left: 30px;
         justify-content: center;
 
@@ -876,8 +866,7 @@ div {
 
     .botones {
         text-align: center;
-        display: flex;
-        flex-direction: column;
+        @include f-col;
         justify-content: center;
         padding-left: 20px;
 
@@ -933,8 +922,7 @@ div {
 
 
     .premio {
-        display: flex;
-        flex-direction: column;
+        @include f-col;
         .detalle-premios{
             display: flex;
             flex-direction: row;
@@ -990,8 +978,7 @@ div {
  /*PAGINA DE TRABAJOS*/ 
     div { 
         .tipo-cortes {
-            display: flex;
-            flex-direction: column;
+            @include f-col;
             text-align: center;
             .col {
                 .imagen-cortes {

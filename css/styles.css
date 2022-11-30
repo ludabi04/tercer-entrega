@@ -66,8 +66,9 @@ body {
   gap: 2.7rem;
   justify-content: flex-end; }
 
-.titulo-nav {
-  text-align: center; }
+.titulo-nav, .nav-item {
+  text-align: center;
+  text-shadow: 1px 1px 1px #b3b3ed; }
 
 .navbar-nav {
   position: absolute;
@@ -303,8 +304,7 @@ fieldset {
     justify-content: space-between; }
   .todos-testimonios {
     display: block; }
-  .titulo-nav,
-  .nav-item {
+  .titulo-nav, .nav-item {
     text-shadow: 1px 1px 1px #b3b3ed; }
   .nav-item {
     border-radius: none;
