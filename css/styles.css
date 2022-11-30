@@ -40,7 +40,7 @@ body {
   margin: 0 auto;
   text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
   /* Clip Background Image */
-  background: url(../img/cielo.jpeg) repeat-y;
+  background: url(../img/cielo.png) repeat-y;
   -webkit-background-clip: text;
   background-clip: text;
   /* Animate Background Image */
@@ -75,9 +75,9 @@ body {
 
 .nav-item {
   background-image: linear-gradient(191deg, #8BC6EC 0%, #3b3e56 100%);
-  border-radius: 3px;
-  border: 1px solid #a52323;
-  margin: 1rem 0 1rem 0;
+  border-radius: 1rem;
+  margin: .2rem 0 0;
+  border: 1px solid #8585ab;
   text-align: center;
   box-shadow: 1px 1px 3px #8585ab; }
 
@@ -138,13 +138,18 @@ body {
 .premio {
   display: none; }
 
+.novedades p span {
+  text-decoration: underline; }
+
 .titulo-quienes-somos {
   text-align: center;
   font-size: 1.2rem;
   text-decoration: underline; }
 
 .descripcion {
-  text-align: center; }
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<TRABAJOS PARA CELUS<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .tipo-cortes {
@@ -174,7 +179,7 @@ body {
   text-align: center; }
 
 .imagen-producto {
-  width: 300px;
+  width: 200px;
   height: 200px; }
 
 .sugerencia-trabajos {
@@ -197,7 +202,10 @@ body {
     display: none; }
 
 .contactoInicio .mensaje-final .gif {
+  display: block;
   text-align: center; }
+  .contactoInicio .mensaje-final .gif img {
+    width: 50%; }
 
 .donde-estamos-total {
   display: flex;
@@ -209,19 +217,36 @@ div iframe {
   height: 50%;
   width: 100%; }
 
+.como-llegar-conten {
+  display: none; }
+
+.conten-mje-email {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2rem; }
+  .conten-mje-email a {
+    text-decoration: none;
+    color: whitesmoke; }
+
+.email {
+  width: 80%; }
+
 .como-llegar1 {
+  display: none;
   padding: 1rem;
   text-align: center; }
 
 .como-llegar1 span {
   display: none; }
 
-legend {
-  text-align: center;
-  padding-bottom: 1rem; }
-
-.formulario {
+fieldset {
   display: none; }
+  fieldset legend {
+    text-align: center;
+    padding-bottom: 1rem; }
+    fieldset legend .formulario .tituloForm {
+      display: none; }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<FOOTER CELUS<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .lista-redes {
@@ -249,7 +274,7 @@ legend {
     margin: 0 auto;
     text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
     /* Clip Background Image */
-    background: url(../img/cielo.jpeg) repeat-y;
+    background: url(../img/cielo.png) repeat-y;
     -webkit-background-clip: text;
     background-clip: text;
     /* Animate Background Image */
@@ -291,7 +316,8 @@ legend {
   .nav-link {
     font-size: 1rem; }
   .carousel-indicators {
-    z-index: 1; }
+    z-index: 1;
+    display: none; }
   .contenedor-index {
     display: flex;
     flex-direction: row;
@@ -393,9 +419,10 @@ legend {
     to {
       transform: rotate(360deg); } }
   .detalle {
-    max-width: 25%;
-    text-align: center; }
-  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TRABAJOS PARA COMPU<<<<<<<<<<<<<<<<<<<<<<*/
+    max-width: 80%;
+    text-align: center;
+    border: 1px solid skyblue; }
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TRABAJOS PARA tablet<<<<<<<<<<<<<<<<<<<<<<*/
   .tipo-cortes {
     display: flex;
     flex-direction: row;
@@ -408,7 +435,7 @@ legend {
     height: 100%; }
   .ir-arriba {
     display: none; }
-  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<PAGINA DE PRODUCTOS COMPU<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<PAGINA DE PRODUCTOS tablet<<<<<<<<<<<<<<<<<<<<<<<<<<*/
   .encabezado {
     padding: 20px; }
   .productos {
@@ -440,11 +467,11 @@ legend {
     padding-left: 20px;
     padding-top: 30px; }
   div p {
-    padding-left: 20px; }
+    padding: 1rem; }
   .tipos {
     padding-top: 30px;
     font-size: 15px; }
-  /*<<<<<<<<<<<<<<<<<<<<<<<<CONTACTO COMPU<<<<<<<<<<<<<<<<<<<<<*/
+  /*<<<<<<<<<<<<<<<<<<<<<<<<CONTACTO tablet <<<<<<<<<<<<<<<<<<<<<*/
   .menu-item {
     display: none; }
   .mensaje-final {
@@ -458,8 +485,10 @@ legend {
   .donde-estamos p {
     padding-top: 50px;
     padding-bottom: 30px; }
-  .como-llegar-conten {
-    padding-top: 30px;
+  .contactoInicio .mensaje-final .gif {
+    display: block;
+    padding-bottom: 2rem;
+    width: 80%;
     text-align: center; }
   .contactoInicio .donde-estamos-total {
     display: flex;
@@ -476,6 +505,23 @@ legend {
   padding-right: .5rem; }
   .contactoInicio .donde-estamos-total .mapa {
     display: none; }
+
+.contactoInicio .donde-estamos-total .link-llegar {
+  animation-name: click;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  padding-bottom: 3rem; }
+  .contactoInicio .donde-estamos-total .link-llegar .click-llegar {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem; }
+
+@keyframes click {
+  from {
+    transform: scale(0.5); }
+  to {
+    transform: scale(1); } }
 
 div iframe {
   box-shadow: 1px 1px 20px #e3dede;
@@ -545,6 +591,10 @@ legend {
 
 /*MEDIA QUERIE PARA COMPU*/
 @media screen and (min-width: 992px) {
+  /* PAGINA PRINCIPAL*/
+  .carousel-indicators {
+    display: block;
+    text-align: center; }
   /*PAGINA QUIENES SOMOS*/
   .total-pagina-quienes header div h1 {
     color: blue;
@@ -553,26 +603,27 @@ legend {
   .premio {
     display: flex;
     flex-direction: column; }
-  .imagenes-premios {
+    .premio .detalle-premios {
+      display: flex;
+      flex-direction: row; }
+      .premio .detalle-premios .detalle {
+        border: none; }
+  .premio .imagenes-premios {
     display: flex;
     flex-direction: row; }
-  .detalle-premios {
-    display: flex;
-    flex-direction: row; }
+    .premio .imagenes-premios .img-premio {
+      display: inline;
+      filter: drop-shadow(1px 1px 1px black);
+      animation-name: premio;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 3s;
+      width: 7%; }
   .video-tablet {
     display: block;
     padding: 1rem; }
   .video div video {
     width: 100%; }
-  .img-premio {
-    display: inline;
-    filter: drop-shadow(1px 1px 1px black);
-    animation-name: premio;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 3s; }
-  .img-premio {
-    width: 10%; }
   /*PAGINA DE PRODUCTOS*/
   div .comprar-productos {
     display: block;
@@ -587,16 +638,20 @@ legend {
     flex-direction: column;
     text-align: center; }
     div .tipo-cortes .col .imagen-cortes {
-      width: 60%; }
+      width: 40%; }
   /*PAGINA DE CONTACTO*/
-  .contactoInicio .mensaje-final .gif img {
-    display: none; }
   .contactoInicio .donde-estamos-total {
     align-items: stretch;
     padding-left: .5rem;
-    padding-right: .5rem; }
+    padding-right: .5rem;
+    align-items: center; }
     .contactoInicio .donde-estamos-total div .mapa {
-      display: block;
-      width: 100%; }
+      display: block; }
+  .como-llegar-conten {
+    display: block; }
+  .email {
+    display: none; }
   .contactoInicio .donde-estamos-total .link-llegar {
-    display: none; } }
+    display: none; }
+  fieldset {
+    display: block; } }
